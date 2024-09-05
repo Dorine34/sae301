@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonjour SD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-    <form action="traitement.php" method="post">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br><br>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br><br>
+  <h1>Entrez votre nom :</h1>
+  <form id="nameForm">
+    <input type="text" id="nameInput" placeholder="Votre nom" required>
+    <button type="submit">Soumettre</button>
+  </form>
 
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+  <h2 id="greeting"></h2>
 
-        <input type="submit" value="Envoyer">
-    </form>
+  <script>
+    document.getElementById('nameForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche le rechargement de la page
+      var name = document.getElementById('nameInput').value;
+      document.getElementById('greeting').textContent = "Bonjour, " + name + "!";
+    });
+  </script>
+
 </body>
 </html>
