@@ -1,0 +1,35 @@
+/* Style global du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style pour l'image */
+img {
+    margin-top: 20px;
+    width: 150px;
+    height: auto;
+}
+
+/* Style pour le titre (h1) */
+h1 {
+    color: #0073e6;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+/* Style pour la liste non ordonnée */
+ul {
+    list-style-type: none; /* Enlève les puces de la liste */
+    padding: 0;
+    margin-top: 30px;
+}
+
+/* Style pour chaque élément de la liste */
+ul li {
+    font-size: 1
+}   
